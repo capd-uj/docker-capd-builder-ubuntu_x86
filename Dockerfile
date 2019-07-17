@@ -2,7 +2,7 @@ FROM ubuntu:19.04
 MAINTAINER Mateusz Juda <mateusz.juda@gmail.com>
 
 # because of docker cache we have to update/upgrade just before install
-RUN apt-get update -y && apt-get upgrade -yy && DEBIAN_FRONTEND=noninteractive apt-get install -yy gcc g++ make pkg-config automake autoconf libtool libwxgtk...-dev libmpfr-dev libboost-all-dev liblog4cxx-dev libx11-dev  python-numpy python3-numpy python-pip python3-pip python-setuptools python3-setuptools python-dev python2..-dev python3..-dev subversion libjpeg-dev zlib1g-dev libgl1-mesa-dev libglu1-mesa-dev libxt-dev libjpeg-dev libxmu-dev
+RUN apt-get update -y && apt-get upgrade -yy && DEBIAN_FRONTEND=noninteractive apt-get install -yy gcc g++ make pkg-config automake autoconf libtool libwxgtk...-dev libmpfr-dev libboost-all-dev liblog4cxx-dev libpari-dev libx11-dev  python-numpy python3-numpy python-pip python3-pip python-setuptools python3-setuptools python-dev python2..-dev python3..-dev subversion libjpeg-dev zlib1g-dev libgl1-mesa-dev libglu1-mesa-dev libxt-dev libjpeg-dev libxmu-dev
 
 # ADD usr/local /usr/local
 
@@ -23,4 +23,3 @@ RUN  pip install munkres PILLOW Cython nose
 
 ENV CROSS_TARGET_HOST=""
 
-RUN apt-get install -yy libpari-dev
