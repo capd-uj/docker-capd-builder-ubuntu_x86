@@ -22,3 +22,5 @@ RUN  pip install munkres PILLOW Cython nose
 # VOLUME /usr/local/bin
 
 ENV CROSS_TARGET_HOST=""
+
+RUN apt-get install -yy libpari-dev
